@@ -64,9 +64,13 @@ html, body {
 @body-font: 'Rokkitt', serif;
 
 
-//--------------------------------MIXINS-------------
+//--------------------------------MIXINS------------------------------
 .display(){
 	display:flex;
+}
+
+.center(){
+	justify-content: center;
 }
 
 .container {
@@ -96,14 +100,25 @@ header {
 	margin: 20px;
 	padding: 20px;
 	justify-content: space-evenly;
+	@media (max-width: 500px){
+		margin: 0px;
+		flex-wrap: wrap;
+	}
 
 nav {
 	justify-content: flex-end;
 	align-items: flex-end;
+	@media (max-width: 500px){
+		flex-wrap: wrap;
+		margin: 0px;
+	}
 	a {
 		text-decoration: none;
 		color: black;
 		padding: 20px;
+		@media (max-width: 500px){
+			padding: 5px;
+		}
 	}//closes a
 }//closes nav
 }//closes header
@@ -127,7 +142,7 @@ nav {
 button {
 	.display();
 	width: 200px;
-	justify-content: center;
+	.center();
 	padding: 8px 20px;
 	font-size: 1.4rem;
 }
@@ -157,12 +172,12 @@ button {
 	flex-direction: column;
 	flex-wrap: wrap;
 	width: 100%;
-	justify-content: center;
+	.center();;
 
 	.work-history {
 		.display();
 		flex-direction: column;
-		justify-content: center;
+		.center();;
 		padding: 20px;
 		background-color: chartreuse;
 	}
@@ -177,7 +192,7 @@ footer {
 	.display();
 	background-color: darkred;
 	color: white;
-	justify-content: center;
+	.center();;
 	padding: 10px;
 	align-items: center;
 }//closes footer

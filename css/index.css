@@ -173,14 +173,31 @@ body {
   padding: 20px;
   justify-content: space-evenly;
 }
+@media (max-width: 500px) {
+  .container header {
+    margin: 0px;
+    flex-wrap: wrap;
+  }
+}
 .container header nav {
   justify-content: flex-end;
   align-items: flex-end;
+}
+@media (max-width: 500px) {
+  .container header nav {
+    flex-wrap: wrap;
+    margin: 0px;
+  }
 }
 .container header nav a {
   text-decoration: none;
   color: black;
   padding: 20px;
+}
+@media (max-width: 500px) {
+  .container header nav a {
+    padding: 5px;
+  }
 }
 .container .top-section {
   display: flex;
